@@ -1,562 +1,1076 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Kavan Patel Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kavan Patel - Full Stack Developer</title>
+    <meta
+      name="description"
+      content="Kavan Patel - Passionate Full Stack Developer specializing in MERN stack development"
+    />
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="css/aos.css">
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-
-
-<style>
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-.about-mf .about-img {
-  margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-  margin-left: 10px;
-}
-
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
-#typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
-}
-
-
-/* project image zoom effect */
-
-.zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-  transform: scale(1.1);
-}
-
-
-</style>
-
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Kavan Patel</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+  <body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Kavan Patel</span></h1>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+      <div class="loading-content">
+        <div class="loading-logo">
+          <span>K</span>
+          <span>P</span>
+        </div>
+        <div class="loading-text">Loading Portfolio...</div>
+        <div class="loading-bar">
+          <div class="loading-progress"></div>
+        </div>
+      </div>
+    </div>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
 
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'React Developer  ',
-						'Full stack Developer   ',
-						'Engineer  ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>A React Developer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.linkedin.com/in/kavan-patel-763319251/" class="btn btn-primary py-3 px-4">LinkedIn</a> 
-							<a href="https://github.com/kavan3421" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
-    </section>
-
-
-
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Kavan Patel</span></p>
-										<p><span class="title-s">Address: </span> <span>Mahemdabad,Kheda,Gujarat, India</span></p>
-									  </div>
-									</div>
-								  </div>
-
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>React JS</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-							
-									<span>Java Script</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								
-									<span>Node JS</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									<span>Mongo DB</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									<span>C++ with STL</span> <span class="pull-right">75%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p style="text-align: justify;">A passionate and self-driven software developer with expertise in full-stack development using the MERN stack. With experience in building robust web applications, I am adept at solving complex technical challenges and delivering high-quality solutions. Proficient in backend development, API integration, and creating user-friendly interfaces. Always eager to learn new technologies and apply them in innovative projects.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Full-Stack Developer (MERN)</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Web Applications, E-commerce, Fitness Apps, CCTV Surveillance Systems</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Engineering</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Gujarati</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Backend: Node.js, Express.js <br>
-										Frontend: HTML, CSS, JavaScript, React <br>
-										Database: MongoDB, MySQL <br>
-										Tools & Platforms: Git, Google Cloud <br>
-										Other Technologies: REST APIs</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Watching Movies</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text text-center col-md-6  ftco-animate">
-								<p class="mb-4">
-									<span class="number" data-number="4">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/kavan-patel-763319251/" class="btn btn-primary py-3 px-4">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p style="text-align: justify;">Aspiring Software Developer passionate about creating innovative and efficient web applications. Proficient in the MERN stack with hands-on experience building projects like fitness trackers and surveillance systems. Skilled in problem-solving, collaborative development, and eager to contribute to impactful software solutions.</p>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <div class="nav-logo">
+          <a href="#home">Kavan <span class="accent">Patel</span></a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <!-- <li><a href="#experience" class="nav-link">Experience</a></li> -->
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <!-- <li><a href="#testimonials" class="nav-link">Testimonials</a></li> -->
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="nav-extras">
+          <button class="theme-toggle" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          <div class="nav-toggle" id="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
           </div>
         </div>
+      </div>
+    </nav>
 
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2026</span>
-    					<h2>Bachelor of Engineering</h2>
-    					<span class="position">The Charutar Vidya Mandal university</span>
-    					<p class="mt-4">Grade: First class distinction.</p>
-    				</div>
-    			</div>
-
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2019-2022</span>
-    					<h2>Higher Secondary School</h2>
-    					<span class="position">JAWAHAR NAVODAYA VIDYALAYA, KHEDA</span>
-    					<p class="mt-4">Grade: 79.6%</p>
-    				</div>
-				</div>
-    		</div>
-
-    		<div class="row justify-content-center mt-5 ">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="https://drive.google.com/file/d/1FIZmogMJuFRKM4p6gd_tEBwsdu9VcMUB/view?usp=sharing" class="btn btn-primary py-3 px-4">Download Resume</a></p>
-    			</div>
-    		</div>
-    	</div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+            <div class="hero-greeting">
+              <i class="fas fa-hand-wave"></i>
+              Hello, I'm
+            </div>
+            <h1 class="hero-name">
+              <span class="text-reveal">Kavan Patel</span>
+            </h1>
+            <div class="hero-title">
+              <span class="typing-text" id="typing-text"></span>
+              <!-- <span class="cursor">|</span> -->
+            </div>
+            <p class="hero-description">
+              A passionate Full Stack Developer with expertise in MERN stack,
+              creating innovative web applications that solve real-world
+              problems. I love turning complex ideas into beautiful, functional
+              digital experiences.
+            </p>
+            <div class="hero-buttons">
+              <a href="#contact" class="btn btn-primary">
+                <i class="fas fa-envelope"></i>
+                Get In Touch
+              </a>
+              <a href="#projects" class="btn btn-secondary">
+                <i class="fas fa-code"></i>
+                View My Work
+              </a>
+            </div>
+            <div class="hero-social">
+              <a
+                href="https://www.linkedin.com/in/kavan-patel-763319251/"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="https://github.com/kavan3421"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-github"></i>
+              </a>
+              <a
+                href="https://x.com/Kavanpatel51"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <!-- <a
+                href="https://www.instagram.com/_k_p_010/"
+                target="_blank"
+                class="social-link"
+              >
+                <i class="fab fa-instagram"></i>
+              </a> -->
+            </div>
+          </div>
+          <div
+            class="hero-image"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+          >
+            <div class="image-container">
+              <div class="profile-image">
+                <img src="/images/Me.png" alt="Kavan Patel" />
+              </div>
+              <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s">
+                  <i class="fab fa-react"></i>
+                </div>
+                <div class="floating-element" style="--delay: 0.5s">
+                  <i class="fab fa-node-js"></i>
+                </div>
+                <div class="floating-element" style="--delay: 1s">
+                  <i class="fab fa-js-square"></i>
+                </div>
+                <div class="floating-element" style="--delay: 1.5s">
+                  <i class="fas fa-database"></i>
+                </div>
+              </div>
+              <div class="glow-effect"></div>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="scroll-arrow"></div>
+          <span>Scroll Down</span>
+        </div>
+      </div>
     </section>
 
-   
-
-    <section class="ftco-section" id="project-section">
+    <!-- About Section -->
+    <section id="about" class="about">
       <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the projects on React, MERN, HTML, CSS, JS & PYTHON.</p>
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Get to know me better</p>
+        </div>
+        <div class="about-content">
+          <div
+            class="about-card glass-card"
+            data-aos="fade-right"
+            data-aos-duration="800"
+          >
+            <div class="about-image">
+              <img src="/images/Me.png" alt="About Kavan" />
+              <div class="about-badge">
+                <i class="fas fa-code"></i>
+                <span>2+ Years Experience</span>
+              </div>
+            </div>
+            <div class="about-stats">
+              <div class="stat" data-aos="zoom-in" data-aos-delay="100">
+                <span class="stat-number" data-count="6">0</span>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              <div class="stat" data-aos="zoom-in" data-aos-delay="200">
+                <span class="stat-number" data-count="10">0</span>
+                <span class="stat-label">Achievements</span>
+              </div>
+              <div class="stat" data-aos="zoom-in" data-aos-delay="300">
+                <span class="stat-number" data-count="100">0</span>
+                <span class="stat-label">% Satisfaction</span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="about-details"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
+            <div class="detail-card glass-card">
+              <h3><i class="fas fa-user"></i> Who I Am</h3>
+              <p>
+                A passionate and self-driven software developer with expertise
+                in full-stack development using the MERN stack. With experience
+                in building robust web applications, I am adept at solving
+                complex technical challenges and delivering high-quality
+                solutions.
+              </p>
+            </div>
+            <div class="detail-card glass-card">
+              <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+              <ul>
+                <li>
+                  <strong>Bachelor of Engineering</strong> - The Charutar Vidya
+                  Mandal University (2022-2026)
+                </li>
+                <li>
+                  <strong>Higher Secondary</strong> - Jawahar Navodaya
+                  Vidyalaya, Kheda (79.6%)
+                </li>
+              </ul>
+            </div>
+            <div class="detail-card glass-card">
+              <h4><i class="fas fa-map-marker-alt"></i> Personal Info</h4>
+              <ul>
+                <li>
+                  <strong>Location:</strong> Mahemdabad, Kheda, Gujarat, India
+                </li>
+                <li><strong>Languages:</strong> English, Hindi, Gujarati</li>
+                <li>
+                  <strong>Interests:</strong> Traveling, Watching Movies,
+                  Technology
+                </li>
+              </ul>
+            </div>
+            <div class="about-cta">
+              <a
+                href="https://drive.google.com/file/d/1iyWHGiyk5FCMNgTQtag3f0oEGiC8211y/view?usp=sharing"
+                class="btn btn-primary"
+                target="_blank"
+              >
+                <i class="fas fa-download"></i>
+                Download Resume
+              </a>
+            </div>
           </div>
         </div>
-					
-        <div class="row d-flex">
-					<div class="col-md-4 d-flex ftco-animate">
-						<div class="blog-entry justify-content-end">
-						<a href="#" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-			
-							<h3 class="heading"><a href="#">SurveilEye - RFID based vahicle surveillance and security system</a></h3>
-							<p style="text-align: justify;">The RFID-based Surveillance System enhances security by tracking and monitoring individuals or objects using RFID tags. When a tagged item or person passes through RFID-enabled sensors, the system automatically records their movement and integrates with CCTV cameras for real-time visual monitoring. This automated system ensures secure access control and efficient surveillance, making it ideal for environments like offices or warehouses. It combines RFID and CCTV technology to provide scalable, accurate, and error-free security monitoring.</p>
-						</div>
-						</div>
-					</div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://lionsfit.netlify.app/" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://lionsfit.netlify.app/">Fitness Tracker Web application</a></h3>
-                <p style="text-align: justify;">LionsFit is a fitness tracker web app built with the MERN stack. It allows users to sign in, log workouts, and track their fitness journey. The app features interactive elements like a bar chart to display calories burned and a pie chart to visualize workout types. Additionally, it includes a dashboard showcasing a summary of workouts through a workout card, offering a comprehensive and user-friendly experience for fitness tracking.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Kavan3421/amazon" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://github.com/Kavan3421/amazon">Amazon clone</a></h3>
-                <p style="text-align: justify;">Amazon clone is a web application that replicates the core features of Amazon. It includes a user-friendly interface for browsing products, adding them to the cart, and making purchases. A key feature you're working on is allowing users to input details for selling products, which will then update the backend system. This functionality will enable sellers to list their products on the platform, mirroring the core e-commerce functionalities of Amazon. The app is built with the HTML, CSS, JS and PHP. For database MYSQL is used</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://rpscodegame.netlify.app/" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
-
-                <h3 class="heading"><a href="https://rpscodegame.netlify.app/">Rock Paper Scissor Game</a></h3>
-                <p style="text-align: justify;">The Rock Paper Scissors app is a simple web-based game where users can play against the computer. Built with the MERN stack, the app allows users to choose between rock, paper, or scissors, and then the computer randomly selects one as well. The game then determines the winner based on traditional rules: rock beats scissors, scissors beats paper, and paper beats rock. The app provides immediate feedback on the outcome of each round, making it an interactive and fun experience for users.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
-		<!-- added justify-content-center to center align the last two projects -->
-		
-			
-		 </div>
-	  </div>
+      </div>
     </section>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
       <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="20">0</strong>
-                <span>Achievements</span>
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <p class="section-subtitle">Technologies I work with</p>
+        </div>
+        <div class="skills-container">
+          <div class="skills-categories">
+            <div
+              class="skill-category glass-card"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="category-header">
+                <i class="fas fa-code"></i>
+                <h3>Frontend Development</h3>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-bubble" data-skill="95">
+                  <div class="skill-icon">
+                    <i class="fab fa-react"></i>
+                  </div>
+                  <span>React JS</span>
+                  <div class="skill-level">95%</div>
+                </div>
+                <div class="skill-bubble" data-skill="90">
+                  <div class="skill-icon">
+                    <i class="fab fa-js-square"></i>
+                  </div>
+                  <span>JavaScript</span>
+                  <div class="skill-level">90%</div>
+                </div>
+                <div class="skill-bubble" data-skill="85">
+                  <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                  </div>
+                  <span>HTML5</span>
+                  <div class="skill-level">85%</div>
+                </div>
+                <div class="skill-bubble" data-skill="85">
+                  <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                  </div>
+                  <span>CSS3</span>
+                  <div class="skill-level">85%</div>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="4">0</strong>
-                <span>Projects</span>
+
+            <div
+              class="skill-category glass-card"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="category-header">
+                <i class="fas fa-server"></i>
+                <h3>Backend Development</h3>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-bubble" data-skill="80">
+                  <div class="skill-icon">
+                    <i class="fab fa-node-js"></i>
+                  </div>
+                  <span>Node.js</span>
+                  <div class="skill-level">80%</div>
+                </div>
+                <div class="skill-bubble" data-skill="75">
+                  <div class="skill-icon">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                  <span>MongoDB</span>
+                  <div class="skill-level">75%</div>
+                </div>
+                <div class="skill-bubble" data-skill="70">
+                  <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                  </div>
+                  <span>MySQL</span>
+                  <div class="skill-level">70%</div>
+                </div>
+                <div class="skill-bubble" data-skill="75">
+                  <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <span>Express.js</span>
+                  <div class="skill-level">75%</div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="skill-category glass-card"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="category-header">
+                <i class="fas fa-tools"></i>
+                <h3>Tools & Others</h3>
+              </div>
+              <div class="skills-grid">
+                <div class="skill-bubble" data-skill="85">
+                  <div class="skill-icon">
+                    <i class="fab fa-git-alt"></i>
+                  </div>
+                  <span>Git</span>
+                  <div class="skill-level">85%</div>
+                </div>
+                <!-- <div class="skill-bubble" data-skill="75">
+                                <div class="skill-icon">
+                                    <i class="fab fa-google"></i>
+                                </div>
+                                <span>Google Cloud</span>
+                                <div class="skill-level">75%</div>
+                            </div> -->
+                <div class="skill-bubble" data-skill="80">
+                  <div class="skill-icon">
+                    <i class="fas fa-code-branch"></i>
+                  </div>
+                  <span>REST APIs</span>
+                  <div class="skill-level">80%</div>
+                </div>
+                <div class="skill-bubble" data-skill="70">
+                  <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                  </div>
+                  <span>C++</span>
+                  <div class="skill-level">70%</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to work on real world projects &amp; to keep myself updated accoding to technologies </h4>
-						<br>
-						<p><a href="https://github.com/kavan3421" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    </section>
 
-
-
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+    <!-- Experience Timeline -->
+    <section id="experience" class="experience">
       <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Experience & Education</h2>
+          <p class="section-subtitle">My journey so far</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+            <div class="timeline-marker">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-date">2022 - 2026</div>
+              <h3>Bachelor of Engineering</h3>
+              <h4>The Charutar Vidya Mandal University</h4>
+              <p>
+                Currently pursuing B.E. with first class distinction, focusing
+                on software development and engineering principles.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Software Engineering</span>
+                <span class="skill-tag">Data Structures</span>
+                <span class="skill-tag">Algorithms</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
+            <div class="timeline-marker">
+              <i class="fas fa-code"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-date">2023 - Present</div>
+              <h3>Full Stack Developer</h3>
+              <h4>Personal Projects & Freelance</h4>
+              <p>
+                Developed multiple web applications using MERN stack, including
+                fitness trackers, e-commerce platforms, and surveillance
+                systems.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">MERN Stack</span>
+                <span class="skill-tag">React.js</span>
+                <span class="skill-tag">Node.js</span>
+                <span class="skill-tag">MongoDB</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="timeline-item" data-aos="fade-right" data-aos-delay="300">
+            <div class="timeline-marker">
+              <i class="fas fa-school"></i>
+            </div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-date">2019 - 2022</div>
+              <h3>Higher Secondary School</h3>
+              <h4>Jawahar Navodaya Vidyalaya, Kheda</h4>
+              <p>
+                Completed higher secondary education with 79.6%, building strong
+                foundation in mathematics and science.
+              </p>
+              <div class="timeline-skills">
+                <span class="skill-tag">Mathematics</span>
+                <span class="skill-tag">Physics</span>
+                <span class="skill-tag">Chemistry</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Some of my recent work</p>
+        </div>
+
+        <div class="project-filters" data-aos="fade-up" data-aos-delay="100">
+          <button class="filter-btn active" data-filter="all">
+            All Projects
+          </button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+        </div>
+
+        <div class="projects-grid">
+          <div
+            class="project-card glass-card"
+            data-category="fullstack web"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="project-image">
+              <img
+                src="/images/proj_1.jpg"
+                alt="SurveilEye Project"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a href="https://surveileye.netlify.app" class="project-link" title="View Project">
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="https://github.com/Kavan3421/RFID-based-gatepass-system" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>SurveilEye - RFID Surveillance System</h3>
+              <p>
+                Advanced RFID-based vehicle surveillance and security system
+                with real-time monitoring capabilities and CCTV integration.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">RFID</span>
+                <span class="tech-tag">IoT</span>
+                <span class="tech-tag">Real-time</span>
+                <span class="tech-tag">Security</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass-card"
+            data-category="fullstack web"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-image">
+              <img
+                src="/images/proj_2.jpg"
+                alt="LionsFit Project"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://lionsfit.netlify.app/"
+                    class="project-link"
+                    title="View Project"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="https://github.com/kavan3421/lionsfit" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>LionsFit - Fitness Tracker</h3>
+              <p>
+                Comprehensive fitness tracking web application with workout
+                logging, progress visualization, and interactive charts.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Chart.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass-card"
+            data-category="fullstack web"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-image">
+              <img
+                src="/images/proj_3.jpg"
+                alt="InsightIQ Project"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://iqinsight.netlify.app"
+                    class="project-link"
+                    title="View Project"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a
+                    href="https://github.com/Kavan3421/Insightiq"
+                    class="project-link"
+                    title="View Code"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>InsightIQ – Business Analytics Dashboard</h3>
+              <p>
+                Full-featured analytics dashboard with role-based access, KPI
+                metrics, charts, trends, and export functionality.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Node.js</span>
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Recharts</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass-card"
+            data-category="fullstack web"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-image">
+              <img
+                src="/images/proj_4.jpg"
+                alt="TechForge Club Website"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://techforgeclub.netlify.app"
+                    class="project-link"
+                    title="View Project"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>TechForge Club Website</h3>
+              <p>
+                A dynamic and responsive club management portal built using the
+                MERN stack. Features include event management, announcements,
+                admin panel, and member showcase.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">MongoDB</span>
+                <span class="tech-tag">Express.js</span>
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">Node.js</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass-card"
+            data-category="frontend web"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="project-image">
+              <img
+                src="/images/proj_5.jpg"
+                alt="AstraSoft Innovation Frontend Website"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://astrasoftinnovations.dev"
+                    class="project-link"
+                    title="View Live Site"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>AstraSoft Innovations – Frontend Website</h3>
+              <p>
+                Responsive, animated landing page for AstraSoft Innovation with
+                smooth scroll, modern UI, service sections, and contact form —
+                built using React and AOS.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">React.js</span>
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">AOS</span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="project-card glass-card"
+            data-category="frontend"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="project-image">
+              <img
+                src="/images/proj_6.jpg"
+                alt="Amazon Clone Project"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://github.com/Kavan3421/amazon"
+                    class="project-link"
+                    title="View Code"
+                    target="_blank"
+                  >
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Amazon Clone</h3>
+              <p>
+                Full-featured e-commerce platform replicating Amazon's core
+                functionalities with product management and shopping cart.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">HTML</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- <div
+            class="project-card glass-card"
+            data-category="web frontend"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="project-image">
+              <img
+                src="/placeholder.svg?height=300&width=400&text=Rock+Paper+Scissors"
+                alt="Rock Paper Scissors Game"
+              />
+              <div class="project-overlay">
+                <div class="project-links">
+                  <a
+                    href="https://rpscodegame.netlify.app/"
+                    class="project-link"
+                    title="View Project"
+                    target="_blank"
+                  >
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="#" class="project-link" title="View Code">
+                    <i class="fab fa-github"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3>Rock Paper Scissors Game</h3>
+              <p>
+                Interactive web-based game with smooth animations, score
+                tracking, and responsive design for all devices.
+              </p>
+              <div class="project-tech">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">Animations</span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="projects-cta" data-aos="fade-up" data-aos-delay="500">
+          <a
+            href="https://github.com/kavan3421"
+            class="btn btn-primary"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i>
+            View All Projects on GitHub
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">What People Say</h2>
+          <p class="section-subtitle">
+            Testimonials from colleagues and mentors
+          </p>
+        </div>
+
+        <div
+          class="testimonials-slider"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="testimonial-card glass-card active">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>
+                "Kavan is an exceptional developer with a keen eye for detail.
+                His ability to solve complex problems and deliver high-quality
+                solutions is impressive."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img
+                    src="/images/Gunj.jpg"
+                    alt="Mentor"
+                  />
+                </div>
+                <div class="author-info">
+                  <h4>Gunj Patel</h4>
+                  <span>CEO, AstraSoft Innovations</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card">
+            <div class="testimonial-content">
+              <div class="quote-icon">
+                <i class="fas fa-quote-left"></i>
+              </div>
+              <p>
+                "Working with Kavan on the fitness tracker project was amazing.
+                His technical skills and dedication to quality are outstanding."
+              </p>
+              <div class="testimonial-author">
+                <div class="author-image">
+                  <img
+                    src="/images/Darshni.jpeg"
+                    alt="Colleague"
+                  />
+                </div>
+                <div class="author-info">
+                  <h4>Darshni Mistry</h4>
+                  <span>Project Collaborator</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="testimonial-navigation">
+          <button class="testimonial-btn prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <!-- <span class="dot" data-slide="2"></span> -->
+          </div>
+          <button class="testimonial-btn next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle">
+            Let's work together on your next project
+          </p>
+        </div>
+
+        <div class="contact-content">
+          <div
+            class="contact-info"
+            data-aos="fade-right"
+            data-aos-duration="800"
+          >
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h3>Location</h3>
+              <p>Mahemdabad, Kheda<br />Gujarat, India</p>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h3>Phone</h3>
+              <p><a href="tel:+919313203461">+91 93132 03461</a></p>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h3>Email</h3>
+              <p>
+                <a href="mailto:kavanpatel3421@gmail.com"
+                  >kavanpatel3421@gmail.com</a
+                >
+              </p>
+            </div>
+
+            <div class="contact-card glass-card">
+              <div class="contact-icon">
+                <i class="fas fa-download"></i>
+              </div>
+              <h3>Resume</h3>
+              <p>
+                <a
+                  href="https://drive.google.com/file/d/1iyWHGiyk5FCMNgTQtag3f0oEGiC8211y/view?usp=sharing"
+                  target="_blank"
+                  >Download CV</a
+                >
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="contact-form-container glass-card"
+            data-aos="fade-left"
+            data-aos-duration="800"
+          >
+            <form class="contact-form" id="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" id="name" name="name" required />
+                  <label for="name">Your Name</label>
+                  <div class="form-line"></div>
+                </div>
+                <div class="form-group">
+                  <input type="email" id="email" name="email" required />
+                  <label for="email">Your Email</label>
+                  <div class="form-line"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" id="subject" name="subject" required />
+                <label for="subject">Subject</label>
+                <div class="form-line"></div>
+              </div>
+              <div class="form-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                ></textarea>
+                <label for="message">Your Message</label>
+                <div class="form-line"></div>
+              </div>
+              <button type="submit" class="btn btn-primary submit-btn">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading">
+                  <i class="fas fa-spinner fa-spin"></i>
+                  Sending...
+                </span>
+              </button>
+            </form>
           </div>
         </div>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>Mahemdabad,Kheda,Gujarat<br> India</p>
-	          </div>
+        <div class="contact-cta" data-aos="fade-up" data-aos-delay="400">
+          <h3>Have a Question?</h3>
+          <p>
+            Feel free to reach out through any of the channels above, or connect
+            with me on social media!
+          </p>
+          <div class="social-links">
+            <a
+              href="https://www.linkedin.com/in/kavan-patel-763319251/"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/kavan3421"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://x.com/Kavanpatel51"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-twitter"></i>
+            </a>
+            <!-- <a
+              href="https://www.instagram.com/_k_p_010/"
+              target="_blank"
+              class="social-link"
+            >
+              <i class="fab fa-instagram"></i>
+            </a> -->
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://0101010101">+91 93132 03461</a></p>
-	          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-text">
+            <p>
+              &copy; 2024 Kavan Patel. All rights reserved. Made with
+              <i class="fas fa-heart"></i> and lots of coffee.
+            </p>
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">kavanpatel3421@gmail.com</a></p>
-	          </div>
+          <div class="footer-social">
+            <a
+              href="https://www.linkedin.com/in/kavan-patel-763319251/"
+              target="_blank"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/kavan3421" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://x.com/Kavanpatel51" target="_blank">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <!-- <a href="https://www.instagram.com/_k_p_010/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a> -->
           </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/1FIZmogMJuFRKM4p6gd_tEBwsdu9VcMUB/view?usp=sharing">resumelink</a></p>
-	          </div>
-          </div>
+        </div>
+      </div>
+    </footer>
 
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYzhOJmcdlQnmOgtg6GpmkkyE4eUAkd5AKvgb_sKxtpqfiMw/viewform?usp=dialog" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div>
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/kavan-patel-763319251/"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://x.com/Kavanpatel51"><span class="icon-twitter"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/_k_p_010/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
+    <!-- Notification Toast -->
+    <div class="toast" id="toast">
+      <div class="toast-content">
+        <i class="toast-icon"></i>
+        <span class="toast-message"></span>
+      </div>
+      <button class="toast-close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
-
-
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
-
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
