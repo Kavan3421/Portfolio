@@ -1869,7 +1869,6 @@ section {
     left: 1rem;
     width: auto;
     max-width: calc(100% - 2rem);
-    transform: none !important;
   }
 }
 
