@@ -526,6 +526,9 @@ body {
   background: var(--gradient-primary);
   color: white;
   box-shadow: var(--shadow-md);
+  display: block;
+  margin: auto;
+  text-align: center;
 }
 
 .btn-primary:hover {
