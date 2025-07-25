@@ -1669,7 +1669,7 @@ section {
   position: fixed;
   top: 2rem;
   right: 2rem;
-  background: white;
+  /* background: white; */
   border-radius: 0.5rem;
   box-shadow: var(--shadow-lg);
   padding: 1rem 1.5rem;
@@ -1687,6 +1687,7 @@ section {
 }
 
 .toast.success {
+  color: #10b981;
   border-left: 4px solid var(--success-color);
 }
 
@@ -1731,6 +1732,37 @@ section {
 .toast-close:hover {
   background: var(--bg-secondary);
   color: var(--text-primary);
+}
+
+/* 🌙 Toast styling in dark mode */
+body[data-theme="dark"] .toast {
+  background-color: #1e1e1e;  /* Dark toast background */
+  color: #f0f0f0;             /* Light text for visibility */
+}
+
+body[data-theme="dark"] .toast .toast-message,
+body[data-theme="dark"] .toast .toast-close,
+body[data-theme="dark"] .toast .toast-icon {
+  color: #f0f0f0 !important;  /* Light icons/text inside toast */
+}
+
+
+body[data-theme="dark"] .form-group label {
+  color: #ccc;
+  background-color: #111; /* or your dark background */
+}
+
+body[data-theme="dark"] .form-group input,
+body[data-theme="dark"] .form-group textarea {
+  color: #eee;
+  border-bottom-color: #444;
+}
+
+body[data-theme="dark"] .form-group input:focus + label,
+body[data-theme="dark"] .form-group input:not(:placeholder-shown) + label,
+body[data-theme="dark"] .form-group textarea:focus + label,
+body[data-theme="dark"] .form-group textarea:not(:placeholder-shown) + label {
+  color: #00e5ff; /* highlight on focus */
 }
 
 /* Responsive Design */
@@ -1863,13 +1895,13 @@ section {
     font-size: 2rem;
   }
 
-  .toast {
+  /* .toast {
     top: 1rem;
     right: 1rem;
     left: 1rem;
     width: auto;
     max-width: calc(100% - 2rem);
-  }
+  } */
 }
 
 @media (max-width: 480px) {
