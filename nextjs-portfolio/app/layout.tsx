@@ -13,7 +13,8 @@ export const metadata: Metadata = {
     default: "Kavan Patel - Full Stack Developer",
     template: "%s | Kavan Patel",
   },
-  description: "Passionate Full Stack Developer specializing in MERN stack development.",
+  description:
+    "Passionate Full Stack Developer specializing in MERN stack development.",
   keywords: [
     "Full Stack Developer",
     "MERN Stack",
@@ -37,7 +38,6 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        // dedicated OG image (generated)
         url: "/images/og-cover.png",
         width: 1200,
         height: 630,
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: "Kavan Patel - Full Stack Developer",
     description:
       "Passionate Full Stack Developer specializing in MERN stack development.",
-  images: ["/images/og-cover.png"],
+    images: ["/images/og-cover.png"],
   },
   robots: {
     index: true,
@@ -73,32 +73,48 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      url: `${siteUrl}/`,
+      name: "Kavan Patel Portfolio",
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${siteUrl}/?q={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      name: "Kavan Patel",
+      url: `${siteUrl}/`,
+      jobTitle: "Full Stack Developer",
+      worksFor: {
+        "@type": "Organization",
+        name: "Independent",
+      },
+      sameAs: [
+        "https://www.linkedin.com/in/kavan-patel-763319251/",
+        "https://github.com/kavan3421",
+        "https://x.com/Kavanpatel51",
+        "https://www.instagram.com/kavan._patel_/",
+      ],
+    },
+  ];
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        {/* Server-rendered JSON-LD structured data for Person */}
+        {/* ✅ Valid structured data for Person + WebSite */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              name: "Kavan Patel",
-              url: siteUrl + '/',
-              jobTitle: "Full Stack Developer",
-              worksFor: { "@type": "Organization", name: "Independent" },
-              sameAs: [
-                "https://www.linkedin.com/in/kavan-patel-763319251/",
-                "https://github.com/kavan3421",
-                "https://x.com/Kavanpatel51",
-                "https://www.instagram.com/kavan._patel_"
-              ]
-            })
+            __html: JSON.stringify(jsonLd),
           }}
         />
-        <ThemeProvider>
-          {children}
-        </ThemeProvider>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
   );
