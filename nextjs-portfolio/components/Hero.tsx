@@ -63,10 +63,10 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-visible pt-20">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 w-full">
       
-      <div className="container-custom relative z-10">
-  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="container-custom relative z-10 w-full">
+  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center w-full">
           {/* Left Content */}
           <motion.div
             variants={containerVariants}
