@@ -37,7 +37,8 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-cover.jpg",
+        // dedicated OG image (generated)
+        url: "/images/og-cover.png",
         width: 1200,
         height: 630,
         alt: "Kavan Patel - Full Stack Developer",
@@ -51,7 +52,7 @@ export const metadata: Metadata = {
     title: "Kavan Patel - Full Stack Developer",
     description:
       "Passionate Full Stack Developer specializing in MERN stack development.",
-    images: ["/images/og-cover.jpg"],
+  images: ["/images/og-cover.png"],
   },
   robots: {
     index: true,
@@ -75,6 +76,26 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
+        {/* Server-rendered JSON-LD structured data for Person */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Kavan Patel",
+              url: siteUrl + '/',
+              jobTitle: "Full Stack Developer",
+              worksFor: { "@type": "Organization", name: "Independent" },
+              sameAs: [
+                "https://www.linkedin.com/in/kavan-patel-763319251/",
+                "https://github.com/kavan3421",
+                "https://x.com/Kavanpatel51",
+                "https://www.instagram.com/kavan._patel_"
+              ]
+            })
+          }}
+        />
         <ThemeProvider>
           {children}
         </ThemeProvider>
