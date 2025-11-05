@@ -94,77 +94,83 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      url: `${siteUrl}/`,
-      name: "Kavan Patel Portfolio",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: `${siteUrl}/?q={search_term_string}`,
-        "query-input": "required name=search_term_string",
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      name: "Kavan Patel",
-      url: `${siteUrl}/`,
-      jobTitle: "Full Stack Developer",
-      description: "Passionate Full Stack Developer specializing in MERN stack development with expertise in React, Node.js, MongoDB, Express, TypeScript, and modern web technologies.",
-      knowsAbout: [
-        "Full Stack Development",
-        "MERN Stack",
-        "React.js",
-        "Node.js",
-        "JavaScript",
-        "TypeScript",
-        "MongoDB",
-        "Express.js",
-        "Next.js",
-        "Web Development",
-        "Software Engineering",
-        "Frontend Development",
-        "Backend Development",
-        "Three.js",
-        "Tailwind CSS",
-      ],
-      worksFor: {
-        "@type": "Organization",
-        name: "Independent",
-      },
-      sameAs: [
-        "https://www.linkedin.com/in/kavan-patel-763319251/",
-        "https://github.com/kavan3421",
-        "https://x.com/Kavanpatel51",
-        "https://www.instagram.com/kavan._patel_/",
-      ],
-      alumniOf: {
-        "@type": "EducationalOrganization",
-        name: "Educational Institution",
-      },
-      hasOccupation: {
-        "@type": "Occupation",
-        name: "Full Stack Developer",
-        occupationalCategory: "15-1252.00",
-        skills: "JavaScript, TypeScript, React, Node.js, MongoDB, Express, Next.js, REST API, GraphQL, Git, Docker, AWS",
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      name: "Kavan Patel - Full Stack Development Services",
-      url: `${siteUrl}/`,
-      description: "Professional full stack web development services specializing in MERN stack applications",
-      provider: {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
         "@type": "Person",
+        "@id": `${siteUrl}/#person`,
         name: "Kavan Patel",
+        url: siteUrl,
+        image: `${siteUrl}/profile.jpg`,
+        sameAs: [
+          "https://github.com/kavanpatel",
+          "https://linkedin.com/in/kavanpatel",
+        ],
+        jobTitle: "Full Stack Developer",
+        worksFor: {
+          "@type": "Organization",
+          name: "Freelance",
+        },
+        knowsAbout: [
+          "JavaScript",
+          "TypeScript",
+          "React",
+          "Next.js",
+          "Node.js",
+          "Express.js",
+          "MongoDB",
+          "PostgreSQL",
+          "MERN Stack",
+          "Full Stack Development",
+          "Web Development",
+          "Software Engineering",
+        ],
+        hasOccupation: {
+          "@type": "Occupation",
+          name: "Full Stack Developer",
+          occupationLocation: {
+            "@type": "Country",
+            name: "Worldwide",
+          },
+          description:
+            "Expert in MERN stack development, creating scalable web applications",
+          skills: "JavaScript, React, Node.js, MongoDB, Express.js, Next.js",
+        },
+        description:
+          "Kavan Patel is a passionate Full Stack Developer specializing in MERN stack development. Expert in building modern, scalable web applications using React, Node.js, MongoDB, and Express.js.",
       },
-      areaServed: "Worldwide",
-      serviceType: "Web Development",
-    },
-  ];
+      {
+        "@type": "ProfessionalService",
+        "@id": `${siteUrl}/#service`,
+        name: "Kavan Patel - Full Stack Development Services",
+        url: siteUrl,
+        description:
+          "Professional full stack web development services specializing in MERN stack applications",
+        provider: {
+          "@id": `${siteUrl}/#person`,
+        },
+        areaServed: "Worldwide",
+        serviceType: "Web Development",
+        address: {
+          "@type": "PostalAddress",
+          addressCountry: "IN",
+          addressRegion: "Gujarat",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": `${siteUrl}/#website`,
+        url: siteUrl,
+        name: "Kavan Patel - Full Stack Developer Portfolio",
+        description:
+          "Portfolio of Kavan Patel, a Full Stack Developer specializing in MERN stack development",
+        publisher: {
+          "@id": `${siteUrl}/#person`,
+        },
+      },
+    ],
+  };
 
   return (
     <html lang="en" suppressHydrationWarning>
